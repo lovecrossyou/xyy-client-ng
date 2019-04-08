@@ -2,14 +2,13 @@
     <div class="rating_page">
         <head-top head-title="发现" go-back='true'></head-top>
         <section>发现</section>
-        <foot-guide></foot-guide>
+        <!-- <foot-guide></foot-guide> -->
     </div>
 </template>
 
 <script>
     import headTop from 'src/components/header/head'
     import {getImgPath} from 'src/components/common/mixin'
-    import footGuide from 'src/components/footer/footGuide'
 
     export default {
       data(){
@@ -23,7 +22,6 @@
         mixins: [getImgPath],
         components: {
             headTop,
-            footGuide,
         },
         props:[],
         methods: {

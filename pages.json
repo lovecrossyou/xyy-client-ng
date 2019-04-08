@@ -7,6 +7,24 @@
 			}
 		},
 		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "uni-app"
@@ -25,13 +43,13 @@
 		"backgroundColor": "#ffffff",
 		"list": [{
 				"pagePath": "pages/msite/msite",
-				"text": "首页",
+				"text": "外卖",
 				"iconPath": "static/tab/home_normal.png",
 				"selectedIconPath": "static/tab/home.png"
 			},
 			{
 				"pagePath": "pages/search/search",
-				"text": "购物车",
+				"text": "搜索",
 				"iconPath": "static/tab/cart_normal.png",
 				"selectedIconPath": "static/tab/cart.png"
 			},

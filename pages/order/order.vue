@@ -45,14 +45,13 @@
 
 <script>
     import {mapState, mapMutations} from 'vuex'
-    import headTop from 'src/components/header/head'
-    import computeTime from 'src/components/common/computeTime'
-    import loading from 'src/components/common/loading'
-    import {getImgPath} from 'src/components/common/mixin'
-    import footGuide from 'src/components/footer/footGuide'
-    import {getOrderList} from 'src/service/getData'
-    import {loadMore} from 'src/components/common/mixin'
-    import {imgBaseUrl} from 'src/config/env'
+    import headTop from '../../components/header/head'
+    import computeTime from '../../components/common/computeTime'
+    import loading from '../../components/common/loading'
+    import {getImgPath} from '../../components/common/mixin'
+    import {getOrderList} from '../../service/getData'
+    import {loadMore} from '../../components/common/mixin'
+    import {imgBaseUrl} from '../../config/env'
 
 
     export default {
@@ -71,7 +70,6 @@
         mixins: [loadMore],
         components: {
             headTop,
-            footGuide,
             loading,
             computeTime,
         },

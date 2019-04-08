@@ -1,8 +1,8 @@
 <template>
     <div class="profile_page">
         <head-top go-back='true' :head-title="profiletitle"></head-top>
-        <section>
-            <section class="profile-number">
+        <div>
+            <div class="profile-number">
                 <router-link :to="userInfo&&userInfo.user_id? '/profile/info' : '/login'" class="profile-link">
                     <img :src="imgBaseUrl + userInfo.avatar" class="privateImage" v-if="userInfo&&userInfo.user_id">
                     <span class="privateImage" v-else>
@@ -27,8 +27,8 @@
                         </svg>
                     </span>
                 </router-link>
-            </section>
-            <section class="info-data">
+            </div>
+            <div class="info-data">
                 <ul class="clear">
                     <router-link to="/balance" tag="li" class="info-data-link">
                         <span class="info-data-top"><b>{{parseInt(balance).toFixed(2)}}</b>元</span>
@@ -43,8 +43,8 @@
                         <span class="info-data-bottom">我的积分</span>
                     </router-link>
                 </ul>
-            </section>
-            <section class="profile-1reTe">
+            </div>
+            <div class="profile-1reTe">
                 <!-- 我的订单 -->
                 <router-link to='/order' class="myorder">
                     <aside>
@@ -93,8 +93,8 @@
                         </span>
                     </div>
                 </router-link>
-            </section>
-            <section class="profile-1reTe">
+            </div>
+            <div class="profile-1reTe">
                 <!-- 服务中心 -->
                 <router-link to='/service' class="myorder">
                     <aside>
@@ -127,9 +127,8 @@
                         </span>
                     </div>
                 </router-link>
-            </section>
-        </section>
-        <foot-guide></foot-guide>
+            </div>
+        </div>
         <transition name="router-slid" mode="out-in">
             <router-view></router-view>
         </transition>
@@ -137,11 +136,10 @@
 </template>
 
 <script>
-import headTop from 'src/components/header/head'
-import footGuide from 'src/components/footer/footGuide'
+import headTop from '../../components/header/head'
 import {mapState, mapMutations} from 'vuex'
-import {imgBaseUrl} from 'src/config/env'
-import {getImgPath} from 'src/components/common/mixin'
+import {imgBaseUrl} from '../../config/env'
+import {getImgPath} from '../../components/common/mixin'
 
 export default {
     data(){
@@ -163,7 +161,6 @@ export default {
     mixins: [getImgPath],
     components:{
         headTop,
-        footGuide,
     },
 
     computed:{

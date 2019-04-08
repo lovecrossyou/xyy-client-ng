@@ -24,16 +24,16 @@
         },
         created(){
             //判断系统
-            let u = navigator.userAgent;
-            let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
-            let isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-            if (isAndroid) {
-                this.system = 'Android';
-            } else if (isIOS) {
-                this.system = 'IOS';
-            } else {
-                this.system = 'pc';
-            }
+//             let u = navigator.userAgent;
+//             let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+//             let isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+//             if (isAndroid) {
+//                 this.system = 'Android';
+//             } else if (isIOS) {
+//                 this.system = 'IOS';
+//             } else {
+//                 this.system = 'pc';
+//             }
         },
         mixins: [],
         components: {
