@@ -5,14 +5,14 @@
             <input type="search" name="search" placeholder="请输入商家或美食名称" class="search_input" v-model="searchValue" @input="checkInput">
             <input type="submit" name="submit" class="search_submit" @click.prevent="searchTarget('')">
         </div>
-        <section v-if="restaurantList.length">
+        <div v-if="restaurantList.length">
             <h4 class="title_restaurant">商家</h4>
             <ul class="list_container">
                 <router-link :to="{path:'/shop', query:{id:item.id}}" tag="li" v-for="item in restaurantList" :key="item.id" class="list_li">
-                    <section class="item_left">
+                    <div class="item_left">
                         <img :src="imgBaseUrl + item.image_path" class="restaurant_img">
-                    </section>
-                    <section class="item_right">
+                    </div>
+                    <div class="item_right">
                         <div class="item_right_text">
                             <p>
                                 <span>{{item.name}}</span>
@@ -32,11 +32,11 @@
                                 <span class="only_phone">(手机客户端专享)</span>
                             </li>
                         </ul>
-                    </section>
+                    </div>
                 </router-link>
             </ul>
-        </section>
-        <section class="search_history" v-if="searchHistory.length&&showHistory">
+        </div>
+        <div class="search_history" v-if="searchHistory.length&&showHistory">
             <h4 class="title_restaurant">搜索历史</h4>
             <ul>
                 <li v-for="(item, index) in searchHistory" :key="index" class="history_list">
@@ -48,7 +48,7 @@
                 </li>
             </ul>
             <footer class="clear_history" @click="clearAllHistory">清空搜索历史</footer>
-        </section>
+        </div>
         <div class="search_none" v-if="emptyResult">很抱歉！无搜索结果</div>
     </div>
 </template>
